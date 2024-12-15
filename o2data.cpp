@@ -89,38 +89,6 @@ public:
     }
 };
 
-int Student::studentCount = 0;
-
-class StudentDatabase {
-private:
-    vector<Student *> students;
-
-public:
-    void addStudent(Student *s) {
-        students.push_back(s);
-    }
-odGroup << "\nContact Address: " << contactAddress
-             << "\nTelephone Number: " << telephoneNumber
-             << "\nDriving License No.: " << drivingLicenseNo << "\nOther: " << other << endl;
-    }
-
-    // This Pointer
-    void setStudentDetails(const string &name, int rollNumber, const string &className,
-                           char division, const string &dateOfBirth, const string &bloodGroup,
-                           const string &contactAddress, const string &telephoneNumber,
-                           const string &drivingLicenseNo, const string &other) {
-        this->name = name;
-        this->rollNumber = rollNumber;
-        this->className = className;
-        this->division = division;
-        this->dateOfBirth = dateOfBirth;
-        this->bloodGroup = bloodGroup;
-        this->contactAddress = contactAddress;
-        this->telephoneNumber = telephoneNumber;
-        this->drivingLicenseNo = drivingLicenseNo;
-        this->other = other;
-    }
-};
 
 int Student::studentCount = 0;
 
