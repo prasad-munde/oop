@@ -3,7 +3,7 @@
 using namespace std;
 
 template<class T>       
-        T selection_sort()        //Template function
+        void selection_sort()        //Template function
         {
         T a[10];
         T temp;
