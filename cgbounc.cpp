@@ -2,44 +2,44 @@
 #include <conio.h>
 #include <math.h>
 
-Void drawBall(int x, int y, int radius) {
-    Setcolor(RED);
-    Circle(x, y, radius);
-    Floodfill(x, y, RED);
+void drawBall(int x, int y, int radius) {
+    setcolor(RED);
+    circle(x, y, radius);
+    floodfill(x, y, RED);
 }
 
-Int main() {
+int main() {
     // Initialize graphics
-    Int gd = DETECT, gm;
-    Initgraph(&gd, &gm, “”);
+    int gd = DETECT, gm;
+    initgraph(&gd, &gm, "");
 
     // Ball properties
-    Int radius = 20;
-    Int x = 400; // Starting X position
-    Float time = 0.0f;
-    Float frequency = 0.1f; // Frequency of sine wave
-    Float amplitude = 150.0f; // Amplitude of bounce
-    Int baseHeight = 300; // Base height for the sine wave
+    int radius = 20;
+    int x = 400; // Starting X position
+    float time = 0.0f;
+    float frequency = 0.1f; // Frequency of sine wave
+    float amplitude = 150.0f; // Amplitude of bounce
+    int baseHeight = 300; // Base height for the sine wave
 
     // Main loop
-    While (!kbhit()) {
+    while (!kbhit()) {
         // Clear the previous frame
-        Cleardevice();
+        cleardevice();
 
         // Calculate the y position using sine wave
-        Int y = baseHeight + static_cast<int>(amplitude * sin(frequency * time));
+        int y = baseHeight + static_cast<int>(amplitude * sin(frequency * time));
 
         // Draw the ball
         drawBall(x, y, radius);
 
         // Update time
-        Time += 0.1f;
+        time += 0.1f;
 
         // Delay for a smoother animation
-        Delay(20);
+        delay(20);
     }
 
     // Close the graphics window
-    Closegraph();
-    Return 0;
+    closegraph();
+    return 0;
 }
