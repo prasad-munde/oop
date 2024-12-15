@@ -78,7 +78,7 @@ int main()
     cin >> pageCount;
 
     Book book(title, price, pageCount);
-
+    cin.ignore();
     // Input for Tape
     cout << "\nEnter details for Tape:" << endl;
     cout << "Title: ";
